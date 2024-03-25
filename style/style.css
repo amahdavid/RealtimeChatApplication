@@ -25,7 +25,6 @@ body {
 }
 
 /* Sign Up Form */
-
 .form {
     padding: 25px 30px;
 }
@@ -52,14 +51,69 @@ body {
     border: 1px solid #f5c6cb;
 }
 
+.form form .name_details {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .name_details .field:first-child {
+    margin-right: 10px;
+}
+
+.form .name_details .field:last-child {
+    margin-left: 10px;
+}
+
 .form form .field{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 }
 
+.form form .field label {
+    margin-bottom: 2px;
+}
+
+.form form .field input {
+    outline: none;
+}
+
 .form form .input input {
     height: 40px;
     width: 100%;
     font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+
+.form form .image input {
+    font-size: 14px;
+}
+
+.form form .button input {
+    margin-right: 13px;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form .link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.form .link a {
+    color: #007bff;
+}
+
+.form .link a:hover {
+    text-decoration: underline;
 }
