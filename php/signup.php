@@ -37,7 +37,7 @@
                     {
                         $time = time();
                         $new_img_name = $time.$img_name;
-                        if (move_uploaded_file($tmp_name, "images/.$new_img_name")) 
+                        if (move_uploaded_file($tmp_name, "images/$new_img_name")) 
                         {
                             $status = 'Active now';
                             $random_id = rand(time(), 10000000);
