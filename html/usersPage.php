@@ -3,6 +3,12 @@
     if(!isset($_SESSION['unique_id'])){
         header("location: loginPage.php");
     }
+
+    // create a group button
+    // find somewhere to place the button
+    // you will be taken to a new page where you can create a group
+    // you will be able to add users to the group from the list of users
+    // you will then be taken to the group chat area
 ?>
 
 <?php include_once('header.php'); ?>
