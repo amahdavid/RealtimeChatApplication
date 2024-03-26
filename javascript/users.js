@@ -11,6 +11,27 @@ searchBtn.onclick = () => {
     }    
 }
 
+searchBar.onkeyup = () => {
+    let searchTerm = searchBar.value;
+    let xhr = new XMLHttpRequest();
+    if (searchTerm != "") {
+        searchBar.classList.add('active');
+    } else {
+        searchBar.classList.remove('active');
+    }
+    xhr.open("POST", "../php/search.php", true);
+    xhr.onload = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let data = xhr.response;
+                usersList.innerHTML = data;
+            }
+        }
+    }
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("searchTerm=" + searchTerm);
+}
+
 setInterval(() => {
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "../php/users.php", true);
@@ -18,9 +39,10 @@ setInterval(() => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 let data = xhr.response;
-                usersList.innerHTML = data;
-                console.log(data);
-            }
+                if (!searchBar.classList.contains('active')) {
+                    usersList.innerHTML = data;
+                }
+            }   
         }
     }
     // let formData = new FormData();
