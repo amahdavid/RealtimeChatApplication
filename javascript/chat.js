@@ -47,7 +47,7 @@ setInterval(() => {
     let formData = new FormData(form);
     xhr.send(formData);
 }
-, 500);
+, 600);
 
 function scrollToBottom(){
     chatBox.scrollTop = chatBox.scrollHeight;

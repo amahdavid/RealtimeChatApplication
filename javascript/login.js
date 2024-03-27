@@ -3,7 +3,7 @@ const continueBtn = form.querySelector('.button input');
 const errorText = form.querySelector('.error_text');
 
 form.onsubmit = (e) => {
-    e.preventDefault(); // preventing form from submitting
+    e.preventDefault();
 }
 
 continueBtn.onclick = () => {
