@@ -30,6 +30,7 @@
                     <p><?php echo $row['status']?></p>
                 </div>
             </div>
+            <a href="groupChatPageCreation.php" class="create_group"><i class="fas fa-plus"></i></a>
             <a href="../php/logout.php?user_id=<?php echo $row['unique_id'] ?>" class="logout">Logout</a>
         </header>
         <div class="search">

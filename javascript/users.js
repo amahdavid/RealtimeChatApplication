@@ -45,8 +45,6 @@ setInterval(() => {
             }   
         }
     }
-    // let formData = new FormData();
-    // formData.append("search", searchBar.value);
     xhr.send();
 }
 , 600);
